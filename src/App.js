@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './components/MainLayout/MainLayout';
 import { routes } from './route-config/app-route-config.ts';
 
 function App() {
   return (
-    <BrowserRouter>
+    <div className='app_wrapper'>
+      <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainLayout />}>
           {routes.map(route => {
@@ -16,6 +16,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 
